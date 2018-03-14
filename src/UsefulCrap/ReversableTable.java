@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * @param <K> Second Varible Type
  */
 public class ReversableTable<H,K> {
-	protected ArrayList<Pair> tabable=new ArrayList<Pair>();
+	protected ArrayList<Pair> mainArray=new ArrayList<Pair>();
 	
 	/**
 	 * @param input1 Array of type H inputs
@@ -19,6 +19,9 @@ public class ReversableTable<H,K> {
 	}
 	public ReversableTable(H input1, K input2) {
 		add(input1,input2);
+	}
+	public ReversableTable() {
+		
 	}
 	
 	/**
@@ -39,16 +42,16 @@ public class ReversableTable<H,K> {
 	 * @return True
 	 */
 	public boolean add(H input1, K input2){
-		tabable.add(new Pair<H,K>(input1,input2));
+		mainArray.add(new Pair<H,K>(input1,input2));
 		return true;
 	}
 	public K[] getDatas(H input) {
 		ArrayList<K> output=new ArrayList<K>();
 		Pair temp=null;
-		for(int x=0;x!=tabable.size();x++) {
-			temp=tabable.get(x);
+		for(int x=0;x!=mainArray.size();x++) {
+			temp=mainArray.get(x);
 			if(temp.getFirst()==input) {
-				output.add((K) temp.getFirst());
+				output.add((K) temp.getSecond());
 			}
 		}
 		return (K[])output.toArray();
@@ -56,10 +59,10 @@ public class ReversableTable<H,K> {
 	public H[] getKeys(K input) {
 		ArrayList<H> output=new ArrayList<H>();
 		Pair temp=null;
-		for(int x=0;x!=tabable.size();x++) {
-			temp=tabable.get(x);
+		for(int x=0;x!=mainArray.size();x++) {
+			temp=mainArray.get(x);
 			if(temp.getSecond()==input) {
-				output.add((H) temp.getSecond());
+				output.add((H) temp.getFirst());
 			}
 		}
 		return (H[])output.toArray();
@@ -81,10 +84,10 @@ public class ReversableTable<H,K> {
 		return getKeys(input)[0];
 	}
 	public ArrayList<Pair> getTabable() {
-		return tabable;
+		return mainArray;
 	}
 	public void setTabable(ArrayList<Pair> tabable) {
-		this.tabable = tabable;
+		this.mainArray = tabable;
 	}
 	@Override
 	public String toString() {

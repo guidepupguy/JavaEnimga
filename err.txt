@@ -1,0 +1,7 @@
+CircularArray added a to 0
+CircularArray added b to 1
+CircularArray added a to 2
+CircularArray added c to 3
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 4
+	at UsefulCrap.ReversableTable.add(ReversableTable.java:34)
+	at UsefulCrap.Mains.main(Mains.java:24)
