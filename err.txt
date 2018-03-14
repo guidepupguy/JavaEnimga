@@ -4,33 +4,20 @@ CircularArray added a to 2
 CircularArray added c to 3
 CircularArray added d to 4
 CircularArray added e to 5
+Finals
 CircularArray added Safe a to 6
-first
-CircularArray added Safe b to 6
-first
-CircularArray added Safe a to 6
-first
-CircularArray added Safe c to 6
-first
-CircularArray added Safe d to 6
-first
-CircularArray added Safe e to 6
-first
-CircularArray added Safe a to 6
-sec
-CircularArray added Safe b to 6
-sec
-CircularArray added Safe a to 6
-sec
-CircularArray added Safe c to 6
-sec
-CircularArray added Safe d to 6
-sec
-CircularArray added Safe e to 6
-sec
-ReverseTable Added Index
-ReverseTable Added Index
-ReverseTable Added Index
-ReverseTable Added Index
-ReverseTable Added Index
-ReverseTable Added Index
+CircularArray added Safe b to 7
+CircularArray added Safe a to 8
+CircularArray added Safe c to 9
+CircularArray added Safe d to 10
+CircularArray added Safe e to 11
+CircularArray added Safe a to -6
+CircularArray added Safe b to -5
+CircularArray added Safe a to -4
+CircularArray added Safe c to -3
+CircularArray added Safe d to -2
+CircularArray added Safe e to -1
+Exception in thread "main" java.lang.ClassCastException: [Ljava.lang.Object; cannot be cast to [Ljava.lang.Integer;
+	at UsefulCrap.CircularArray.getLocs(CircularArray.java:66)
+	at UsefulCrap.CircularArray.getLoc(CircularArray.java:69)
+	at UsefulCrap.Mains.main(Mains.java:27)

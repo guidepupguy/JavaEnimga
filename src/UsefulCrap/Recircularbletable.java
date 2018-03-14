@@ -7,20 +7,20 @@ import java.util.ArrayList;
  * @param <H> First Variable Type
  * @param <K> Second Varible Type
  */
-public class ReversableTable<H,K> {
-	protected ArrayList<Pair> mainArray=new ArrayList<Pair>();
+public class Recircularbletable<H,K> {
+	protected CircularArray<Pair> mainArray=new CircularArray<Pair>();
 	
 	/**
 	 * @param input1 Array of type H inputs
 	 * @param input2 Array of type K inputs synced to the type H inputs
 	 */
-	public ReversableTable(H[] input1, K[] input2) {
+	public Recircularbletable(H[] input1, K[] input2) {
 		add(input1,input2);
 	}
-	public ReversableTable(H input1, K input2) {
+	public Recircularbletable(H input1, K input2) {
 		add(input1,input2);
 	}
-	public ReversableTable() {
+	public Recircularbletable() {
 		
 	}
 	public int size() {
@@ -34,7 +34,7 @@ public class ReversableTable<H,K> {
 	public boolean add(H[] input1, K[] input2) {
 		for(int x=0; x!=input1.length; x++) {
 			add(input1[x],input2[x]);
-			System.err.println("ReverseTable Added Index "+input1[x].toString()+","+input2[x].toString());
+			System.err.println("Recircularble Added Index "+input1[x].toString()+","+input2[x].toString());
 		}
 		return true;
 	}
@@ -47,6 +47,12 @@ public class ReversableTable<H,K> {
 	public boolean add(H input1, K input2){
 		mainArray.add(new Pair<H,K>(input1,input2));
 		return true;
+	}
+	public Pair getPairs(H input) {
+		
+	}
+	public Pair getPairs(K input) {
+		
 	}
 	public K[] getDatas(H input) {
 		ArrayList<K> output=new ArrayList<K>();
@@ -94,10 +100,10 @@ public class ReversableTable<H,K> {
 	public H getKey(K input) {
 		return getKeys(input)[0];
 	}
-	public ArrayList<Pair> getTabable() {
+	public CircularArray<Pair> getTabable() {
 		return mainArray;
 	}
-	public void setTabable(ArrayList<Pair> tabable) {
+	public void setTabable(CircularArray<Pair> tabable) {
 		this.mainArray = tabable;
 	}
 	@Override
