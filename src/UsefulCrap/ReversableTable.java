@@ -42,28 +42,43 @@ public class ReversableTable<H,K> {
 		tabable.add(new Pair<H,K>(input1,input2));
 		return true;
 	}
-	public K getData(H input) {
-		
-	}
-	public H getKey(K input) {
+	public K[] getDatas(H input) {
+		ArrayList<K> output=new ArrayList<K>();
+		Pair temp=null;
 		for(int x=0;x!=tabable.size();x++) {
-			
-		}
-	}
-	protected ArrayList<Object> loopGet(boolean isData,Object Check) {
-		ArrayList<Object> output=new ArrayList<Object>();
-		Object temp=null;
-		if(isData) {
-			
-		}
-		for(int x=0;x!=tabable.size();x++) {
-			if(isData) {
-				temp=tabable.get(x).getFirst();
-				if(temp==Check) {
-					output.add(Check);
-				}
+			temp=tabable.get(x);
+			if(temp.getFirst()==input) {
+				output.add((K) temp.getFirst());
 			}
 		}
+		return (K[])output.toArray();
+	}
+	public H[] getKeys(K input) {
+		ArrayList<H> output=new ArrayList<H>();
+		Pair temp=null;
+		for(int x=0;x!=tabable.size();x++) {
+			temp=tabable.get(x);
+			if(temp.getSecond()==input) {
+				output.add((H) temp.getSecond());
+			}
+		}
+		return (H[])output.toArray();
+	}
+	/**
+	 * Returns first Data that Matches the key given
+	 * @param input
+	 * @return First data for given Key
+	 */
+	public K getData(H input) {
+		return getDatas(input)[0];
+	}
+	/**
+	 * Returns first Data that Matches the key given
+	 * @param input
+	 * @return First key that has matching data
+	 */
+	public H getKey(K input) {
+		return getKeys(input)[0];
 	}
 	public ArrayList<Pair> getTabable() {
 		return tabable;
