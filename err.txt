@@ -2,6 +2,35 @@ CircularArray added a to 0
 CircularArray added b to 1
 CircularArray added a to 2
 CircularArray added c to 3
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 4
-	at UsefulCrap.ReversableTable.add(ReversableTable.java:34)
-	at UsefulCrap.Mains.main(Mains.java:24)
+CircularArray added d to 4
+CircularArray added e to 5
+CircularArray added Safe a to 6
+first
+CircularArray added Safe b to 6
+first
+CircularArray added Safe a to 6
+first
+CircularArray added Safe c to 6
+first
+CircularArray added Safe d to 6
+first
+CircularArray added Safe e to 6
+first
+CircularArray added Safe a to 6
+sec
+CircularArray added Safe b to 6
+sec
+CircularArray added Safe a to 6
+sec
+CircularArray added Safe c to 6
+sec
+CircularArray added Safe d to 6
+sec
+CircularArray added Safe e to 6
+sec
+ReverseTable Added Index
+ReverseTable Added Index
+ReverseTable Added Index
+ReverseTable Added Index
+ReverseTable Added Index
+ReverseTable Added Index

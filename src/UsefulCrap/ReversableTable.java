@@ -2,7 +2,7 @@ package UsefulCrap;
 import java.util.ArrayList;
 
 /**
- * @author Student
+ * @author Alex
  *
  * @param <H> First Variable Type
  * @param <K> Second Varible Type
@@ -23,7 +23,9 @@ public class ReversableTable<H,K> {
 	public ReversableTable() {
 		
 	}
-	
+	public int size() {
+		return mainArray.size();
+	}
 	/**
 	 * @param input1 Array of H object inputs
 	 * @param input2 Array of type K inputs
@@ -32,6 +34,7 @@ public class ReversableTable<H,K> {
 	public boolean add(H[] input1, K[] input2) {
 		for(int x=0; x!=input1.length; x++) {
 			add(input1[x],input2[x]);
+			System.err.println("ReverseTable Added Index");
 		}
 		return true;
 	}
@@ -73,7 +76,12 @@ public class ReversableTable<H,K> {
 	 * @return First data for given Key
 	 */
 	public K getData(H input) {
+		try {
 		return getDatas(input)[0];
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.err.print("Error!");
+			return null;
+		}
 	}
 	/**
 	 * Returns first Data that Matches the key given
